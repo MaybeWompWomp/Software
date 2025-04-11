@@ -1,1 +1,1 @@
-# Very epic school project! kill me please
+# Very epic school project!
