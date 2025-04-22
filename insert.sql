@@ -30,23 +30,23 @@ INSERT INTO Rezervace (id_klienta, id_zajezdu, datum_rezervace, pocet_osob, stav
 
 -- Vkládání dat do tabulky Ubytovani
 INSERT INTO Ubytovani (nazev, typ, adresa, hodnoceni, kontakt) VALUES
-('Hotel Riviera', 'Hotel', 'Via Roma 10, Itálie', 4.5, 'info@riviera.it'),
-('Alpský resort', 'Penzion', 'Hochstraße 22, Rakousko', 4.8, 'contact@alpsresort.at'),
-('Hostel Paris', 'Hostel', 'Rue de la République 45, Francie', 3.9, 'paris@hostel.fr'),
-('Resort Luxor', 'Hotel', 'El Salam St, Egypt', 4.2, 'info@luxorresort.eg'),
-('Cabin Fjord', 'Chata', 'Oslo Fjord, Norsko', 4.7, 'booking@fjord.no'),
-('Hotel Budapest', 'Hotel', 'Andrássy út 60, Maďarsko', 4.0, 'hotel@budapest.hu'),
-('Villa Roma', 'Apartmán', 'Piazza Venezia, Itálie', 4.6, 'villa@roma.it');
+('Sdílené pokoje', 'Šatny', 'místnost 43', 4.5, 'info@riviera.it'),
+('Oddělené spaní na lavičkách', 'chodba', 'Na třebešíně 69', 4.8, 'contact@alpsresort.at'),
+('Spaní pod hvězdami před branami Třebešína', 'Pozemek hl. města Prahy', '50°0502.7N 14°2931.4E', 3.9, 'paris@hostel.fr'),
+('Luxusunterkunft in einem Kabinett', 'kabinet', 'místnost 201', 4.2, 'info@luxorresort.eg'),
+('Nocleh pod krásami tabule', 'učebna', 'jakákoli učebna', 4.7, 'booking@fjord.no'),
+('Bezesná noc v pohodlí cizího jazyka', 'studovna', 'učebna 107', 4.0, 'hotel@budapest.hu'),
+('Zážitková noc u soustruhů', 'Sdílené práce', 'učebna 511', 4.6, 'villa@roma.it');
 
 -- Vkládání dat do tabulky UbytovaniNaZajezdu
 INSERT INTO UbytovaniNaZajezdu (id_zajezdu, id_ubytovani, pocet_noci, pokoj) VALUES
-(1, 1, 10, 'Dvojlůžkový'),
+(1, 1, 10, 'Padesátilůžkový'),
 (2, 2, 7, 'Jednolůžkový'),
 (3, 3, 5, 'Společný'),
-(4, 4, 10, 'Luxusní apartmán'),
-(5, 5, 9, 'Chata 2+2'),
-(6, 6, 2, 'Standardní'),
-(7, 7, 5, 'Rodinný pokoj');
+(4, 4, 10, 'Dvoulůžkový'),
+(5, 5, 9, 'Čtyřlůžkový'),
+(6, 6, 2, 'Patnáctilůžkový'),
+(7, 7, 5, 'Jednolůžkový');
 
 -- Vkládání dat do tabulky Pruvodce
 INSERT INTO Pruvodce (jmeno, prijmeni, jazyk, telefon, email) VALUES
@@ -56,17 +56,17 @@ INSERT INTO Pruvodce (jmeno, prijmeni, jazyk, telefon, email) VALUES
 ('Daniel', 'Dibelka', 'Arabština', '147258369', 'daniel.dibelka@wompstuff.com'),
 ('Michal', 'Slačík', 'Polština', '321654987', 'michal.slacik@wompstuff.com'),
 ('Timotej', 'Beňo', 'Maďarština', '741852963', 'timotej.beno@wompstuff.com'),
-('Tereza', 'Valentová', 'Italština', '852963741', 'tereza.valentova@wompstuff.com');
+('Pavel', 'Jiran', 'Italština', '852963741', 'tereza.valentova@wompstuff.com');
 
 -- Vkládání dat do tabulky PruvodceNaZajezdu
 INSERT INTO PruvodceNaZajezdu (id_pruvodce, id_zajezdu, role) VALUES
-(1, 1, 'Hlavní průvodce'),
-(2, 3, 'Místní průvodce'),
-(3, 2, 'Horský průvodce'),
-(4, 4, 'Delegát'),
-(5, 5, 'Expediční vůdce'),
-(6, 6, 'Turistický průvodce'),
-(7, 7, 'Historický výklad');
+(1, 4, 'Historický výklad'),
+(2, 7, 'Místní průvodce'),
+(3, 2, 'Hlavní průvodce'),
+(4, 3, 'Delegát'),
+(5, 1, 'Turistický průvodce'),
+(6, 6, 'Foreign průvodce'),
+(7, 5, 'Odborný průvodce');
 
 -- Vkládání dat do tabulky Recenze
 INSERT INTO Recenze (id_klienta, id_zajezdu, hodnoceni, text, datum) VALUES
