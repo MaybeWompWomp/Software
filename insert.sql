@@ -1,12 +1,12 @@
 -- Vkládání dat do tabulky Klient
 INSERT INTO Klient (jmeno, prijmeni, email, telefon) VALUES
-('Jan', 'Novák', 'jan.novak@example.com', '123456789'),
-('Petra', 'Dvořáková', 'petra.dvorakova@example.com', '987654321'),
-('Lukáš', 'Svoboda', 'lukas.svoboda@example.com', '111222333'),
-('Eva', 'Kučerová', 'eva.kucerova@example.com', '444555666'),
-('Tomáš', 'Král', 'tomas.kral@example.com', '777888999'),
-('Marie', 'Bartošová', 'marie.bartosova@example.com', '000111222'),
-('Ondřej', 'Havel', 'ondrej.havel@example.com', '333444555');
+('Jan', 'Souhrada', 'jan.souhrada@wompstuff.com', '123456789'),
+('David', 'Frýbert', 'david.frybert@wompstuff.com', '987654321'),
+('Pavel', 'Jiran', 'pavel.jiran@wompstuff.com', '111222333'),
+('Stanislav', 'Kodr', 'stanislav.kodr@wompstuff.com', '444555666'),
+('Kateřina', 'Šiková', 'katerina.sikova@wompstuff.com', '777888999'),
+('Tomáš', 'Černý', 'tomas.cerny@wompstuff.com', '000111222'),
+('Zdeněk', 'Pulec', 'zdenek.pulec@wompstuff.com', '333444555');
 
 -- Vkládání dat do tabulky Zajezd
 INSERT INTO Zajezd (nazev, destinace, datum_odjezdu, datum_prijezdu, cena) VALUES
@@ -50,13 +50,13 @@ INSERT INTO UbytovaniNaZajezdu (id_zajezdu, id_ubytovani, pocet_noci, pokoj) VAL
 
 -- Vkládání dat do tabulky Pruvodce
 INSERT INTO Pruvodce (jmeno, prijmeni, jazyk, telefon, email) VALUES
-('Karel', 'Malý', 'Angličtina', '123321123', 'karel.maly@example.com'),
-('Anna', 'Horáková', 'Francouzština', '456654456', 'anna.horakova@example.com'),
-('Jiří', 'Pokorný', 'Němčina', '789987789', 'jiri.pokorny@example.com'),
-('Lucie', 'Bláhová', 'Arabština', '147258369', 'lucie.blahova@example.com'),
-('David', 'Novotný', 'Norština', '321654987', 'david.novotny@example.com'),
-('Veronika', 'Doležalová', 'Maďarština', '741852963', 'veronika.dolezalova@example.com'),
-('Pavel', 'Sedlák', 'Italština', '852963741', 'pavel.sedlak@example.com');
+('Wilma', 'Fagersten', 'Angličtina', '123321123', 'wilma.fagersten@wompstuff.com'),
+('Lukáš', 'Trš', 'Francouzština', '456654456', 'lukas.trs@wompstuff.com'),
+('Jan', 'Kuchařík', 'Němčina', '789987789', 'jan.kucharik@wompstuff.com'),
+('Lucie', 'Bláhová', 'Arabština', '147258369', 'lucie.blahova@wompstuff.com'),
+('David', 'Novotný', 'Norština', '321654987', 'david.novotny@wompstuff.com'),
+('Timotej', 'Beňo', 'Maďarština', '741852963', 'timotej.beno@wompstuff.com'),
+('Pavel', 'Sedlák', 'Italština', '852963741', 'pavel.sedlak@wompstuff.com');
 
 -- Vkládání dat do tabulky PruvodceNaZajezdu
 INSERT INTO PruvodceNaZajezdu (id_pruvodce, id_zajezdu, role) VALUES
