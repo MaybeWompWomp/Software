@@ -10,19 +10,19 @@ INSERT INTO Klient (jmeno, prijmeni, email, telefon) VALUES
 
 -- Vkládání dat do tabulky Zajezd
 INSERT INTO Zajezd (nazev, destinace, datum_odjezdu, datum_prijezdu, cena) VALUES
-('Letní Itálie', 'Itálie', '2025-06-10', '2025-06-20', 15990.00),
-('Zimní Alpy', 'Rakousko', '2025-01-15', '2025-01-22', 18990.00),
-('Poznávací Paříž', 'Francie', '2025-04-01', '2025-04-06', 12990.00),
-('Exotický Egypt', 'Egypt', '2025-11-05', '2025-11-15', 19990.00),
-('Adventura v Norsku', 'Norsko', '2025-08-01', '2025-08-10', 22990.00),
-('Víkend v Budapešti', 'Maďarsko', '2025-05-10', '2025-05-12', 5990.00),
-('Silvestr v Římě', 'Itálie', '2025-12-28', '2026-01-02', 14990.00);
+('Třebešínské moře', 'Třebešínský bazén', '2025-06-10', '2025-06-20', 333.00),
+('Okružní cesta Třebešínem', 'SPŠ Třebešín', '2025-01-15', '2025-01-22', 6000.00),
+('Degustační menu na cestě z Třebešína', 'Bufet u Květy', '2025-04-01', '2025-04-06', 444.00),
+('Německá exotika', 'Kabinet němčiny', '2025-11-05', '2025-11-15', 999.00),
+('Adventura u tabule', 'libovolná třída', '2025-08-01', '2025-08-10', 666.00),
+('Úvod do marketingu v Třebešínském Maďarsku', 'Studovna', '2025-05-10', '2025-05-12', 888.00),
+('Komentovaná prohlídka dílen', 'Třebešínské dílny', '2025-12-28', '2026-01-02', 1899.00);
 
 -- Vkládání dat do tabulky Rezervace
 INSERT INTO Rezervace (id_klienta, id_zajezdu, datum_rezervace, pocet_osob, stav) VALUES
 (1, 1, '2025-04-01', 2, 'Potvrzeno'),
 (2, 2, '2024-12-01', 1, 'Zaplaceno'),
-(3, 3, '2025-02-20', 3, 'Storno'),
+(3, 3, '2025-02-20', 3, 'Zaplaceno'),
 (4, 4, '2025-06-15', 2, 'Potvrzeno'),
 (5, 5, '2025-05-05', 4, 'Zaplaceno'),
 (6, 6, '2025-03-03', 2, 'Potvrzeno'),
@@ -50,13 +50,13 @@ INSERT INTO UbytovaniNaZajezdu (id_zajezdu, id_ubytovani, pocet_noci, pokoj) VAL
 
 -- Vkládání dat do tabulky Pruvodce
 INSERT INTO Pruvodce (jmeno, prijmeni, jazyk, telefon, email) VALUES
-('Wilma', 'Fagersten', 'Angličtina', '123321123', 'wilma.fagersten@wompstuff.com'),
-('Lukáš', 'Trš', 'Francouzština', '456654456', 'lukas.trs@wompstuff.com'),
-('Jan', 'Kuchařík', 'Němčina', '789987789', 'jan.kucharik@wompstuff.com'),
-('Lucie', 'Bláhová', 'Arabština', '147258369', 'lucie.blahova@wompstuff.com'),
-('David', 'Novotný', 'Norština', '321654987', 'david.novotny@wompstuff.com'),
+('Wilma', 'Fagersten', 'Němčina', '123321123', 'wilma.fagersten@wompstuff.com'),
+('Lukáš', 'Trš', 'Němčina', '456654456', 'lukas.trs@wompstuff.com'),
+('Jan', 'Kuchařík', 'Japonština', '789987789', 'jan.kucharik@wompstuff.com'),
+('Daniel', 'Dibelka', 'Arabština', '147258369', 'daniel.dibelka@wompstuff.com'),
+('Michal', 'Slačík', 'Polština', '321654987', 'michal.slacik@wompstuff.com'),
 ('Timotej', 'Beňo', 'Maďarština', '741852963', 'timotej.beno@wompstuff.com'),
-('Pavel', 'Sedlák', 'Italština', '852963741', 'pavel.sedlak@wompstuff.com');
+('Tereza', 'Valentová', 'Italština', '852963741', 'tereza.valentova@wompstuff.com');
 
 -- Vkládání dat do tabulky PruvodceNaZajezdu
 INSERT INTO PruvodceNaZajezdu (id_pruvodce, id_zajezdu, role) VALUES
