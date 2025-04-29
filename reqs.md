@@ -4,19 +4,19 @@
 
 ## ✅ Part 1: Database Design
 
-- [ ] Create ER diagram for a relational database
-- [ ] Minimum **7 entities**
-- [ ] Minimum **1 identification dependency**
-- [ ] At least **5 entities** must have **5 attributes**
-- [ ] Entities must be **interconnected**
-- [ ] Must meet **1NF, 2NF, and 3NF**
-- [ ] The database must **make logical sense**
-- [ ] **Get approval from the teacher** before proceeding
+- [X] Create ER diagram for a relational database
+- [X] Minimum **7 entities**
+- [X] Minimum **1 identification dependency**
+- [X] At least **5 entities** must have **5 attributes**
+- [X] Entities must be **interconnected**
+- [X] Must meet **1NF, 2NF, and 3NF**
+- [X] The database must **make logical sense**
+- [X] **Get approval from the teacher** before proceeding
 
 ### 📄 SQL Scripts
 
-- [ ] `create.sql` — script to create the database
-- [ ] `insert.sql` — script to insert **at least 7 records per table**
+- [X] `create.sql` — script to create the database
+- [X] `insert.sql` — script to insert **at least 7 records per table**
 
 ### 🧠 SQL Queries (`queries.sql`)
 
