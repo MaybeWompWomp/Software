@@ -81,3 +81,14 @@ CREATE TABLE Recenze (
     FOREIGN KEY (id_klienta) REFERENCES Klient(id_klienta),
     FOREIGN KEY (id_zajezdu) REFERENCES Zajezd(id_zajezdu)
 );
+-- Vytvoření tabulky Uzivatel (pro přihlašovací údaje klientů)
+CREATE TABLE Uzivatel (
+    id_uzivatele       INT            PRIMARY KEY AUTO_INCREMENT,
+    id_klienta         INT            NOT NULL,
+    uzivatelske_jmeno  VARCHAR(50)    UNIQUE NOT NULL,
+    heslo_hash         VARCHAR(255)   NOT NULL,
+    datum_registrace   DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    posledni_prihlaseni DATETIME,
+    aktivni            BOOLEAN        NOT NULL DEFAULT TRUE,
+    FOREIGN KEY (id_klienta) REFERENCES Klient(id_klienta)
+);
