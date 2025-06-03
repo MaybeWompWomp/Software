@@ -20,7 +20,7 @@
 
 ### 🧠 SQL Queries (`queries.sql`)
 
-- [ ] Write **15 queries**
+- [X] Write **15 queries**
 - [ ] Each query must include:
   - [ ] Natural language comment
   - [ ] SQL statement
