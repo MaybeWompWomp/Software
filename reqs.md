@@ -21,19 +21,19 @@
 ### 🧠 SQL Queries (`queries.sql`)
 
 - [X] Write **15 queries**
-- [ ] Each query must include:
+- [X] Each query must include:
   - [ ] Natural language comment
   - [ ] SQL statement
 - [X] At least **10 queries with WHERE**
 - [X] At least **6 queries with JOIN ON**
 - [X] At least **2 queries with LEFT or RIGHT JOIN**
-- [ ] At least **1 query with aggregate functions**
-- [ ] At least **1 query with GROUP BY + HAVING**
-- [ ] Separate each query with `;`
+- [X] At least **1 query with aggregate functions**
+- [X] At least **1 query with GROUP BY + HAVING**
+- [X] Separate each query with `;`
 
 ### 🗂 Final step
 
-- [ ] Upload all files to **GitHub**
+- [X] Upload all files to **GitHub**
 - [ ] Submit the **GitHub repository link**
 
 ---
