@@ -24,9 +24,9 @@
 - [ ] Each query must include:
   - [ ] Natural language comment
   - [ ] SQL statement
-- [ ] At least **10 queries with WHERE**
-- [ ] At least **6 queries with JOIN ON**
-- [ ] At least **2 queries with LEFT or RIGHT JOIN**
+- [X] At least **10 queries with WHERE**
+- [X] At least **6 queries with JOIN ON**
+- [X] At least **2 queries with LEFT or RIGHT JOIN**
 - [ ] At least **1 query with aggregate functions**
 - [ ] At least **1 query with GROUP BY + HAVING**
 - [ ] Separate each query with `;`
