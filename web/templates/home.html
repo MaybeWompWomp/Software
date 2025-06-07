@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Zájezdové Balíčky</h2>
+
+<ul class="list-group">
+    {% for package in packages %}
+    <li class="list-group-item">
+        <h4>{{ package.package_name }} - ${{ package.cena }}</h4>
+        <p>Destinace: {{ package.destinace }}</p>
+        <p>Datum odjezdu: {{ package.datum_odjezdu }}</p>
+        <p>Datum příjezdu: {{ package.datum_prijezdu }}</p>
+        <p>Průměrné hodnocení uživatelů: {{ package.average_rating is not none and package.average_rating or 'Zatím žádné hodnocení' }}</p>
+
+        <a href="{{ url_for('reviews.view_reviews', package_id=package.id_zajezdu) }}" class="btn btn-secondary">Zobrazit recenze</a>
+
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

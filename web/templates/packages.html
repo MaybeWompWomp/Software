@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Zájezdové Balíčky</h2>
+<ul class="list-group">
+    {% for package in packages %}
+    <li class="list-group-item">
+        <h4>{{ package.package_name }} - ${{ package.cena }}</h4>
+        <p>Destinace: {{ package.destinace }}</p>
+        <p>Datum odjezdu: {{ package.datum_odjezdu }}</p>
+        <p>Datum příjezdu: {{ package.datum_prijezdu }}</p>
+        {% if package.id_ubytovani %}
+        <h5>Ubytování:</h5>
+        <p>Název: {{ package.accommodation_name }}</p>
+        <p>Typ: {{ package.typ }}</p>
+        <p>Adresa: {{ package.adresa }}</p>
+        <p>Hodnocení: {{ package.hodnoceni }}</p>
+        {% else %}
+        <p>Pro tento balíček není k dispozici žádné ubytování.</p>
+        {% endif %}
+        {% if package.guide_name %}
+        <h5>Informace o průvodci:</h5>
+        <p>Jméno průvodce: {{ package.guide_name }} {{ package.guide_lastname }}</p>
+        <p>Jazyk: {{ package.guide_language }}</p>
+        <p>Telefon: {{ package.guide_phone }}</p>
+        {% else %}
+        <p>Pro tento balíček není k dispozici žádný průvodce.</p>
+        {% endif %}
+        <a href="{{ url_for('booking.book', package_id=package.id_zajezdu) }}" class="btn btn-primary">Rezervovat</a>
+        <a href="{{ url_for('reviews.view_reviews', package_id=package.id_zajezdu) }}" class="btn btn-secondary">Zobrazit recenze</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

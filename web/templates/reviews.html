@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Recenze zájezdu: {{ package_name }}</h2>
+
+{% if reviews|length == 0 %}
+  <div class="alert alert-info">
+    Pro tento zájezd zatím nejsou žádné recenze. Buďte první, kdo napíše!
+  </div>
+{% endif %}
+
+<div class="row">
+  {% for review in reviews %}
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ review.jmeno }} {{ review.prijmeni }}
+          <small class="text-muted float-right">{{ review.datum }}</small>
+        </h5>
+        <h6>
+          Hodnocení:
+          <span class="badge badge-primary">{{ review.hodnoceni }}</span>
+        </h6>
+        <p class="card-text">{{ review.text }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if 'user_id' in session %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3 class="mb-0">Napsat recenzi</h3>
+    </div>
+    <div class="card-body">
+      <form method="POST" action="{{ url_for('reviews.submit_review', package_id=package_id) }}">
+        <div class="form-row">
+          <div class="form-group col-sm-3">
+            <label for="hodnoceni">Hodnocení (1–5)</label>
+            <input type="number" 
+                   min="1" max="5" 
+                   name="hodnoceni" 
+                   id="hodnoceni"
+                   required 
+                   class="form-control">
+          </div>
+          <div class="form-group col-sm-9">
+            <label for="text">Recenze</label>
+            <textarea name="text"
+                      id="text"
+                      required 
+                      class="form-control"
+                      rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Odeslat recenzi</button>
+      </form>
+    </div>
+  </div>
+{% else %}
+  <div class="alert alert-warning">
+    Pro napsání recenze se prosím přihlaste.
+  </div>
+{% endif %}
+
+<a href="{{ url_for('packages.packages') }}" class="btn btn-secondary mb-4">
+  ← Zpět na zájezdy
+</a>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{% endblock %}
