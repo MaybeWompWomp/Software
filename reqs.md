@@ -40,14 +40,14 @@
 
 ## ✅ Part 2: Web Application
 
-- [ ] Create a website connected to your database
-- [ ] Use **HTML/CSS** or **WordPress**
-- [ ] At least **5 pages**, one of which is a **homepage**
-- [ ] Use **internal links**
-- [ ] **Clear and user-friendly design**
-- [ ] Include a **form** to insert data into the database
-- [ ] Add **images** (can be generated)
-- [ ] Implement **SEO optimization**
+- [X] Create a website connected to your database
+- [X] Use **HTML/CSS** or **WordPress**
+- [X] At least **5 pages**, one of which is a **homepage**
+- [X] Use **internal links**
+- [X] **Clear and user-friendly design**
+- [X] Include a **form** to insert data into the database
+- [X] Add **images** (can be generated)
+- [] Implement **SEO optimization**
 
 ### 🔍 SEO Requirements
 
