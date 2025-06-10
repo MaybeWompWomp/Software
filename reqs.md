@@ -34,7 +34,7 @@
 ### 🗂 Final step
 
 - [X] Upload all files to **GitHub**
-- [ ] Submit the **GitHub repository link**
+- [X] Submit the **GitHub repository link**
 
 ---
 
@@ -47,15 +47,15 @@
 - [X] **Clear and user-friendly design**
 - [X] Include a **form** to insert data into the database
 - [X] Add **images** (can be generated)
-- [] Implement **SEO optimization**
+- [X] Implement **SEO optimization**
 
 ### 🔍 SEO Requirements
 
-- [ ] Proper use of **headings (h1, h2...)**
-- [ ] Use of `<title>` and **meta description**
-- [ ] All images have `alt` attributes
-- [ ] **Clean URLs**
-- [ ] Use **keywords**, mention **where** they are placed
+- [X] Proper use of **headings (h1, h2...)**
+- [X] Use of `<title>` and **meta description**
+- [X] All images have `alt` attributes
+- [X] **Clean URLs**
+- [X] Use **keywords**, mention **where** they are placed
 
 ---
 
